@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using webapi_csharp.Repositorios;
+﻿using Microsoft.AspNetCore.Mvc;
 using webapi_csharp.Modelos;
+using webapi_csharp.Repositorios;
 
 namespace webapi_csharp.Controllers
 {
@@ -24,7 +19,7 @@ namespace webapi_csharp.Controllers
         {
             RPClientes rpCli = new RPClientes();
 
-            var cliRet = rpCli.ObtenerClientes();
+            var cliRet = rpCli.ObtenerClientes(id);
 
             if (cliRet == null)
             {
